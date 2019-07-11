@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a Series of Lines with Mouse Clicks</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="1001" height="1001" style="border: 1px solid red;">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <input type="file" id="fileName">
+    <button onclick="saveSOR()" type="button">Save SOR</button>
+    <button onclick="readSOR()" type="button">Extract SOR</button> 
+    <button onclick="normalsSwitch()" type="button">Normals ON/OFF</button>
+    <button onclick="decideSmoothFlat()" type="button">Smooth/Flat Shading</button>
+    <button onclick="ambientSwitch()" type="button">Ambient Lighting ON/OFF</button>
+    <button onclick="specularSwitch()" type="button">Specular Lighting ON/OFF</button>
+    <button onclick="switchProjection()" type="button">Ortho/Perspective</button>
+    <input type="range" id="myRange" min="1" max="20" step="1">
+    <button onclick="setnS()">Set Gloss Index</button> 
+    <input type="range" id="myRange2" min="0" max="2" step="1">
+    <button onclick="setTex()">Set Texture</button> 
+
+    <img src="images/displaytex1.jpg" alt="displaytex1.jpg" width="200" height="100">
+    <img src="images/displaytex2.jpg" alt="displaytex2.jpg" width="200" height="100">
+    <img src="images/displaytex3.jpg" alt="displaytex3.jpg" width="200" height="100">
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="ioSOR.js"></script>
+    <script src="WoodburyStephenProg4Driver.js"></script>
+  </body>
+</html>
